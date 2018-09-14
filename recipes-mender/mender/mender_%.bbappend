@@ -1,5 +1,25 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI_append = " file://mender.conf file://server.crt"
 
+MENDER_ARTIFACT_NAME = "release-1"
+INHERIT += "mender-full extrausers"
+MACHINE = "raspberrypi3"
+RPI_USE_U_BOOT = "1"
+MENDER_PARTITION_ALIGNMENT = "4194304"
+MENDER_BOOT_PART_SIZE_MB = "40"
+IMAGE_INSTALL_append = " kernel-image kernel-devicetree"
+IMAGE_FSTYPES_remove += " rpi-sdimg"
+
+DISTRO_FEATURES_append = " systemd"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+VIRTUAL-RUNTIME_initscripts = ""
+IMAGE_FSTYPES = "ext4"
+
+EXTRA_USERS_PARAMS = "usermod -P q1w2e3r4 root; "
+CORE_IMAGE_EXTRA_INSTALL += "openssh"
+PREFERRED_VERSION_linux-raspberrypi = "4.14.%"
+
 MENDER_UPDATE_POLL_INTERVAL_SECONDS = "60"
 MENDER_INVENTORY_POLL_INTERVAL_SECONDS = "60"
+MENDER_SERVER_URL = "https://mender-cellgain.ddns.net"
