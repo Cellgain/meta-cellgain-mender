@@ -16,10 +16,10 @@ inherit go
 GO_IMPORT = "cellgain.ddns.net:30000/cellgain-public/nms-server"
 
 do_compile() {
-  go build main.go
+  
 }
 
 do_install() {
   install -d "${D}/${bindir}"
-  install -m 0755 "${S}/helloworld" "${D}/${bindir}"
+  install -m 0755 "${S}/nms-server" "${D}/${bindir}"
 }
