@@ -51,4 +51,9 @@ do_install() {
     # ${GOPATH}/bin; handle cross compiled case only
     install -t ${D}/${bindir} -m 0755 \
             ${B}/bin/${GOOS}_${GOARCH}/nms-server
+
+    install -d ${D}/${systemd_unitdir}/system
+    install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
+
+    install -d ${D}/${localstatedir}/lib/nms-server
 }
