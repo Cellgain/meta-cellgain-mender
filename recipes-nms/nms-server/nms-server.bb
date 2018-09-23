@@ -12,6 +12,14 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 DEPENDS = "go-cross-${TARGET_ARCH}"
 
+SRC_URI_append = " file://nms-server.service \
+                 "
+
+inherit systemd
+
+SYSTEMD_SERVICE_${PN} = "nms-server.service"
+FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
+               "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
 # like. We disable those checks here.
