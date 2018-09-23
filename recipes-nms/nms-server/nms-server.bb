@@ -10,13 +10,11 @@ SRCREV = "${AUTOREV}"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-DEPENDS += "go-cross-${TARGET_ARCH} \
-	    packr \
+DEPENDS += "go-cross-${TARGET_ARCH} \	   
 	"
 
 SRC_URI_append = " file://nms-server.service \
                  "
-
 inherit systemd
 
 SYSTEMD_SERVICE_${PN} = "nms-server.service"
@@ -28,7 +26,9 @@ FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
 INSANE_SKIP_${PN} = "ldflags"
 
 inherit go
-GO_IMPORT = "cellgain.ddns.net:30000/cellgain-public/nms-server"
+GO_IMPORT = "cellgain.ddns.net/cellgain-public/nms-server"
+
+SYSROOT_DIRS += "${bindir}"
 
 do_compile() {
     GOPATH="${B}:${S}"
@@ -52,7 +52,7 @@ do_compile() {
 
 do_install() {
     install -d ${D}/${bindir}
-
+    
     GOOS=$(eval $(${GO} env) && echo $GOOS)
     GOARCH=$(eval $(${GO} env) && echo $GOARCH)
     # mender is picked up from our fake GOPATH=${B}/bin; because go build is so
@@ -61,7 +61,7 @@ do_install() {
     # ${GOPATH}/bin; handle cross compiled case only
     install -t ${D}/${bindir} -m 0755 \
             ${B}/bin/${GOOS}_${GOARCH}/nms-server
-
+    cp -r ${B}/src/${GO_IMPORT}/html ${D}/${bindir}
     install -d ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
 
