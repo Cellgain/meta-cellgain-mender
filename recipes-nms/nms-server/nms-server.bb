@@ -19,6 +19,7 @@ inherit systemd
 
 SYSTEMD_SERVICE_${PN} = "nms-server.service"
 FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
+                /data/nms-server/.env \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
