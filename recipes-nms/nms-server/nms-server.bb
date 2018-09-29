@@ -61,7 +61,11 @@ do_install() {
     # ${GOPATH}/bin; handle cross compiled case only
     install -t ${D}/${bindir} -m 0755 \
             ${B}/bin/${GOOS}_${GOARCH}/nms-server
-    cp -r ${B}/src/${GO_IMPORT}/html ${D}/${bindir}
+    
+    install -d  ${D}/data
+    mkdir ${D}/data/nms-server
+    cp ${B}/src/${GO_IMPORT}/.env ${D}/data/nms-server/
+    
     install -d ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
 
