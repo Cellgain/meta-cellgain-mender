@@ -1,7 +1,9 @@
 #!/bin/bash
 
-rm /etc/systemd/network/eth.network
+sudo rm -v /etc/systemd/network/eth.network
 
-cp /date/nms-server/eth.network /etc/systemd/network/eth.network
+sudo cp -v /data/nms-server/eth.network /etc/systemd/network/eth.network
 
-systemctl restart systemd-networkd
+sudo systemctl restart systemd-networkd
+
+sudo journalctl -u systemd-networkd -n 15
