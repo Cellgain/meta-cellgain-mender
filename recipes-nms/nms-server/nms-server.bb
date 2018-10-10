@@ -65,9 +65,6 @@ do_install() {
     install -t ${D}/${bindir} -m 0755 \
             ${B}/bin/${GOOS}_${GOARCH}/nms-server
     
-    install -d  ${D}/data
-    mkdir ${D}/data/nms-server
-    cp ${B}/src/${GO_IMPORT}/.env ${D}/data/nms-server/
     
     install -d ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
