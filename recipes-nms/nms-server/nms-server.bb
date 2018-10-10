@@ -14,11 +14,14 @@ DEPENDS += "go-cross-${TARGET_ARCH} \
 	"
 
 SRC_URI_append = " file://nms-server.service \
+                    file://eth-conf.sh \
                  "
 inherit systemd
 
 SYSTEMD_SERVICE_${PN} = "nms-server.service"
 FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
+                /data/nms-server/.env \
+                /data/nms-server/eth-conf.sh \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
@@ -67,4 +70,6 @@ do_install() {
     install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
 
     install -d ${D}/${localstatedir}/lib/nms-server
+    
+    install -m 0777 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server
 }
