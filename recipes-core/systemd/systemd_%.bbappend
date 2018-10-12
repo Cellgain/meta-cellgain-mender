@@ -10,17 +10,21 @@ SRC_URI += " \
 
 
 FILES_${PN} += " \
-    ${sysconfdir}/systemd/network/eth.network \
-    ${sysconfdir}/systemd/network/enp.network \
-    ${sysconfdir}/systemd/network/wireless.network \
+    /data/nms-server/network/eth.network \
+    /data/nms-server/network/enp.network \
+    /data/nms-server/network/wireless.network \
 "
 
 
 do_install_append() {
   if ${@bb.utils.contains('PACKAGECONFIG','networkd','true','false',d)}; then
-        install -d ${D}${sysconfdir}/systemd/network
-        install -m 0755 ${WORKDIR}/eth.network ${D}${sysconfdir}/systemd/network
-        install -m 0755 ${WORKDIR}/enp.network ${D}${sysconfdir}/systemd/network
-        install -m 0755 ${WORKDIR}/wireless.network ${D}${sysconfdir}/systemd/network
+        install -d ${D}/data/nms-server/network
+        install -m 0755 ${WORKDIR}/eth.network ${D}/data/nms-server/network
+        install -m 0755 ${WORKDIR}/enp.network ${D}/data/nms-server/network
+        install -m 0755 ${WORKDIR}/wireless.network ${D}/data/nms-server/network
+
+	ln -s ${D}/data/nms-server/network/wireless.network  ${D}${sysconfdir}/systemd/network/wireless.network
+	ln -s ${D}/data/nms-server/network/enp.network  ${D}${sysconfdir}/systemd/network/enp.network
+	ln -s ${D}/data/nms-server/network/eth.network  ${D}${sysconfdir}/systemd/network/eth.network
   fi
 }
