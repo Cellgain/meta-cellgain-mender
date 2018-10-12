@@ -3,8 +3,12 @@ DESCRIPTION = "NMS Server"
 S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI = "git://cellgain.ddns.net:30000/cellgain-public/nms-server.git;protocol=http;"
+SRC_URI += " \
+	git://cellgain.ddns.net:30000/cellgain-public/nms-server.git;protocol=http; \
+	file://eth-conf.sh \
+	"
 SRCREV = "${AUTOREV}"
 
 LICENSE = "MIT"
@@ -12,16 +16,16 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 DEPENDS += "go-cross-${TARGET_ARCH} \	   
 	"
+RDEPENDS_${PN} = "bash"
 
-SRC_URI_append = " file://nms-server.service \
-                    file://eth-conf.sh \
+SRC_URI_append += " file://nms-server.service \
                  "
 inherit systemd
 
 SYSTEMD_SERVICE_${PN} = "nms-server.service"
+
 FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
-                /data/nms-server/.env \
-                /data/nms-server/eth-conf.sh \
+                ${sysconfdir}/nms-server/eth-conf.sh \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
@@ -70,6 +74,7 @@ do_install() {
     install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
 
     install -d ${D}/${localstatedir}/lib/nms-server
-    
-    install -m 0777 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server
+
+    install -d ${D}/${sysconfdir}/nms-server    
+    install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/${sysconfdir}/nms-server/
 }
