@@ -23,8 +23,8 @@ do_install_append() {
         install -m 0755 ${WORKDIR}/enp.network ${D}/data/nms-server/network
         install -m 0755 ${WORKDIR}/wireless.network ${D}/data/nms-server/network
 
-	ln -s ${D}/data/nms-server/network/wireless.network  ${D}${sysconfdir}/systemd/network/wireless.network
-	ln -s ${D}/data/nms-server/network/enp.network  ${D}${sysconfdir}/systemd/network/enp.network
-	ln -s ${D}/data/nms-server/network/eth.network  ${D}${sysconfdir}/systemd/network/eth.network
+	ln -s /data/nms-server/network/wireless.network  ${D}${sysconfdir}/systemd/network/wireless.network
+	ln -s /data/nms-server/network/enp.network  ${D}${sysconfdir}/systemd/network/enp.network
+	ln -s /data/nms-server/network/eth.network  ${D}${sysconfdir}/systemd/network/eth.network
   fi
 }
