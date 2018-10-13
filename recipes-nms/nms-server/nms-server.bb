@@ -19,7 +19,7 @@ DEPENDS += "go-cross-${TARGET_ARCH} \
 RDEPENDS_${PN} = "bash"
 
 SRC_URI_append += " 	file://nms-server.service \
-			file://wpa_supplicant-ap.service \
+			file://wpa_supplicant-ap@.service \
                  "
 inherit systemd
 
@@ -30,7 +30,7 @@ FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
                 ${sysconfdir}/nms-server/eth-conf.sh \
 		${sysconfdir}/nms-server/start-ap.sh \
 		${sysconfdir}/nms-server/stop-ap.sh \
-		${systemd_unitdir}/system/wpa_supplicant-ap.service \
+		${systemd_unitdir}/system/wpa_supplicant-ap@.service \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
@@ -77,7 +77,7 @@ do_install() {
     
     install -d ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/wpa_supplicant-ap.service ${D}/${systemd_unitdir}/system
+    install -m 0644 ${WORKDIR}/wpa_supplicant-ap@.service ${D}/${systemd_unitdir}/system
 
     install -d ${D}/${localstatedir}/lib/nms-server
 
