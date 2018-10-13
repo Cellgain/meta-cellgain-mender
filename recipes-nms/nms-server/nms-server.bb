@@ -8,6 +8,8 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI += " \
 	git://cellgain.ddns.net:30000/cellgain-public/nms-server.git;protocol=http; \
 	file://eth-conf.sh \
+	file://start-ap.sh \
+	file://stop-ap.sh \
 	"
 SRCREV = "${AUTOREV}"
 
