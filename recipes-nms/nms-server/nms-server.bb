@@ -28,6 +28,8 @@ SYSTEMD_SERVICE_${PN} = "	nms-server.service \
 
 FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
                 ${sysconfdir}/nms-server/eth-conf.sh \
+		${sysconfdir}/nms-server/start-ap.sh \
+		${sysconfdir}/nms-server/stop-ap.sh \
 		${systemd_unitdir}/system/wpa_supplicant-ap.service \
                "
 
@@ -81,4 +83,6 @@ do_install() {
 
     install -d ${D}/${sysconfdir}/nms-server    
     install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/${sysconfdir}/nms-server/
+    install -m 0755 ${WORKDIR}/start-ap.sh ${D}/${sysconfdir}/nms-server/
+    install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 }
