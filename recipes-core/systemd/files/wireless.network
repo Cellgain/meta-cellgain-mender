@@ -1,2 +1,5 @@
+[Match]
+Name=wlan0
+
 [Network]
-DHCP=yes
+Bridge=br0
