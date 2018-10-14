@@ -10,6 +10,7 @@ SRC_URI += " \
 	file://eth-conf.sh \
 	file://start-ap.sh \
 	file://stop-ap.sh \
+	file://wpa_supplicant-wlan0.conf \
 	"
 SRCREV = "${AUTOREV}"
 
@@ -33,6 +34,7 @@ FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
 		${sysconfdir}/nms-server/start-ap.sh \
 		${sysconfdir}/nms-server/stop-ap.sh \
 		${systemd_unitdir}/system/wpa_supplicant-ap@.service \
+		/data/nms-server/network/wpa_supplicant-wlan0.conf \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
@@ -65,26 +67,30 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}/${bindir}
-    
-    GOOS=$(eval $(${GO} env) && echo $GOOS)
-    GOARCH=$(eval $(${GO} env) && echo $GOARCH)
-    # mender is picked up from our fake GOPATH=${B}/bin; because go build is so
-    # consistent, if it's a cross compilation build, binaries will be in
-    # ${GOPATH}/bin/${GOOS}_${GOARCH}, howver if it's not, the binaries are in
-    # ${GOPATH}/bin; handle cross compiled case only
-    install -t ${D}/${bindir} -m 0755 \
-            ${B}/bin/${GOOS}_${GOARCH}/nms-server
-    
-    
-    install -d ${D}/${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/wpa_supplicant-ap@.service ${D}/${systemd_unitdir}/system
+	install -d ${D}/${bindir}
 
-    install -d ${D}/${localstatedir}/lib/nms-server
+	GOOS=$(eval $(${GO} env) && echo $GOOS)
+	GOARCH=$(eval $(${GO} env) && echo $GOARCH)
+	# mender is picked up from our fake GOPATH=${B}/bin; because go build is so
+	# consistent, if it's a cross compilation build, binaries will be in
+	# ${GOPATH}/bin/${GOOS}_${GOARCH}, howver if it's not, the binaries are in
+	# ${GOPATH}/bin; handle cross compiled case only
+	install -t ${D}/${bindir} -m 0755 \
+	    ${B}/bin/${GOOS}_${GOARCH}/nms-server
 
-    install -d ${D}/${sysconfdir}/nms-server    
-    install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/${sysconfdir}/nms-server/
-    install -m 0755 ${WORKDIR}/start-ap.sh ${D}/${sysconfdir}/nms-server/
-    install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
+
+	install -d ${D}/${systemd_unitdir}/system
+	install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
+	install -m 0644 ${WORKDIR}/wpa_supplicant-ap@.service ${D}/${systemd_unitdir}/system
+
+	install -d ${D}/${localstatedir}/lib/nms-server
+
+	install -d ${D}/${sysconfdir}/nms-server    
+	install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/${sysconfdir}/nms-server/
+	install -m 0755 ${WORKDIR}/start-ap.sh ${D}/${sysconfdir}/nms-server/
+	install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
+
+	install -d ${D}/${sysconfdir}/wpa_supplicant
+	install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}/data/nms-server/network/wpa_supplicant-wlan0.conf
+	ln -sf /data/nms-server/network/wpa_supplicant-wlan0.conf ${D}/${sysconfdir}/wpa_supplicant/wpa_supplicant-nl80211-wlan0.conf
 }
