@@ -10,7 +10,6 @@ SRC_URI += " \
 	file://eth-conf.sh \
 	file://start-ap.sh \
 	file://stop-ap.sh \
-	file://crontab \
 	"
 SRCREV = "${AUTOREV}"
 
@@ -88,6 +87,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/${sysconfdir}/nms-server/
     install -m 0755 ${WORKDIR}/start-ap.sh ${D}/${sysconfdir}/nms-server/
     install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
-
-    echo "@reboot root systemctl restart systemd-networkd" >> ${D}/${sysconfdir}/crontab
 }
