@@ -89,5 +89,5 @@ do_install() {
     install -m 0755 ${WORKDIR}/start-ap.sh ${D}/${sysconfdir}/nms-server/
     install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 
-    crontab ${WORKDIR}/crontab
+    echo "@reboot root systemctl restart systemd-networkd" >> ${D}/${sysconfdir}/crontab
 }

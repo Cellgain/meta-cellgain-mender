@@ -1,1 +1,0 @@
-@reboot systemctl restart systemd-networkd
