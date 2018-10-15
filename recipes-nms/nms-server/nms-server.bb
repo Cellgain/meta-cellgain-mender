@@ -91,6 +91,8 @@ do_install() {
 	install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 
 	install -d ${D}/${sysconfdir}/wpa_supplicant
-	install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}/data/nms-server/network/wpa_supplicant-wlan0.conf
+	install -d ${D}/data/nms-server/network
+
+	install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}/data/nms-server/network/
 	ln -sf /data/nms-server/network/wpa_supplicant-wlan0.conf ${D}/${sysconfdir}/wpa_supplicant/wpa_supplicant-nl80211-wlan0.conf
 }
