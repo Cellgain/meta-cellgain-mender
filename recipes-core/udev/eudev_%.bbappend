@@ -1,4 +1,4 @@
-PACKAGECONFIG_append = " udev"
+PACKAGECONFIG_append = " eudev"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
@@ -8,11 +8,12 @@ SRC_URI += " \
 
 
 FILES_${PN} += " \
-	${D}${sysconfdir}/udev/rules.d/70-usb-scale.rules \
+	${sysconfdir}/udev/rules.d/70-usb-scale.rules \
 "
 
 
 do_install_append() {
-	install -d ${D}${sysconfdir}/udev/rules.d/
-	install -m 0644 ${D}${sysconfdir}/udev/rules.d/70-usb-scale.rules
+	install -d ${D}${sysconfdir}/udev/rules.d
+	install -m 0644  ${WORKDIR}/70-usb-scale.rules ${D}${sysconfdir}/udev/rules.d/70-usb-scale.rules
 }
+

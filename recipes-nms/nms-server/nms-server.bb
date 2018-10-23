@@ -11,6 +11,7 @@ SRC_URI += " \
 	file://start-ap.sh \
 	file://stop-ap.sh \
 	file://wpa_supplicant-wlan0.conf \
+	file://70-usb-scale.rules \
 	"
 SRCREV = "${AUTOREV}"
 
@@ -37,6 +38,7 @@ FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
 		${sysconfdir}/nms-server/stop-ap.sh \
 		${systemd_unitdir}/system/wpa_supplicant-ap@.service \
 		/data/nms-server/network/wpa_supplicant-wlan0.conf \
+		${sysconfdir}/udev/rules.d/70-usb-scale.rules \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
@@ -97,4 +99,8 @@ do_install() {
 
 	install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}/data/nms-server/network/
 	ln -sf /data/nms-server/network/wpa_supplicant-wlan0.conf ${D}/${sysconfdir}/wpa_supplicant/wpa_supplicant-nl80211-wlan0.conf
+
+	install -d ${D}${sysconfdir}/udev/rules.d
+	install -m 0644  ${WORKDIR}/70-usb-scale.rules ${D}${sysconfdir}/udev/rules.d/70-usb-scale.rules
 }
+
