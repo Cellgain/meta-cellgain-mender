@@ -10,8 +10,9 @@ SRC_URI += " \
 	file://eth-conf.sh \
 	file://start-ap.sh \
 	file://stop-ap.sh \
-	file://wpa_supplicant-wlan0.conf \
 	file://70-usb-scale.rules \
+	file://nms-server.service \
+	file://nms-server-remote.service \
 	"
 SRCREV = "${AUTOREV}"
 
@@ -25,19 +26,15 @@ DEPENDS += "	go-cross-${TARGET_ARCH} \
 RDEPENDS_${PN} = "bash"
 
 SRC_URI_append += "file://nms-server.service \
-			file://wpa_supplicant-ap@.service \
                  "
 inherit systemd pkgconfig
 
-SYSTEMD_SERVICE_${PN} = "	nms-server.service \
+SYSTEMD_SERVICE_${PN} = "nms-server.service \
 			"
 
-FILES_${PN} += "${systemd_unitdir}/system/nms-server.service \
-                ${sysconfdir}/nms-server/eth-conf.sh \
-		${sysconfdir}/nms-server/start-ap.sh \
+FILES_${PN} += "/data/nms-server/network/eth-conf.sh \
+		/data/nms-server/network/start-ap.sh \
 		${sysconfdir}/nms-server/stop-ap.sh \
-		${systemd_unitdir}/system/wpa_supplicant-ap@.service \
-		/data/nms-server/network/wpa_supplicant-wlan0.conf \
 		${sysconfdir}/udev/rules.d/70-usb-scale.rules \
                "
 
@@ -79,28 +76,34 @@ do_install() {
 	# consistent, if it's a cross compilation build, binaries will be in
 	# ${GOPATH}/bin/${GOOS}_${GOARCH}, howver if it's not, the binaries are in
 	# ${GOPATH}/bin; handle cross compiled case only
-	install -t ${D}/${bindir} -m 0755 \
-	    ${B}/bin/${GOOS}_${GOARCH}/nms-server
-
+	install -t ${D}/${bindir} -m 0755 ${B}/bin/${GOOS}_${GOARCH}/nms-server
 
 	install -d ${D}/${systemd_unitdir}/system
 	install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
-	install -m 0644 ${WORKDIR}/wpa_supplicant-ap@.service ${D}/${systemd_unitdir}/system
 
 	install -d ${D}/${localstatedir}/lib/nms-server
 
 	install -d ${D}/${sysconfdir}/nms-server    
-	install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/${sysconfdir}/nms-server/
-	install -m 0755 ${WORKDIR}/start-ap.sh ${D}/${sysconfdir}/nms-server/
 	install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 
-	install -d ${D}/${sysconfdir}/wpa_supplicant
 	install -d ${D}/data/nms-server/network
-
-	install -m 0600 ${WORKDIR}/wpa_supplicant-wlan0.conf ${D}/data/nms-server/network/
-	ln -sf /data/nms-server/network/wpa_supplicant-wlan0.conf ${D}/${sysconfdir}/wpa_supplicant/wpa_supplicant-nl80211-wlan0.conf
+        install -m 0644 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server/network
+	install -m 0644 ${WORKDIR}/start-ap.sh ${D}/data/nms-server/network
+	
+	ln -s /data/nms-server/network/eth-conf.sh  ${D}/${sysconfdir}/nms-server/
+	ln -s /data/nms-server/network/start-ap.sh  ${D}/${sysconfdir}/nms-server/
 
 	install -d ${D}${sysconfdir}/udev/rules.d
 	install -m 0644  ${WORKDIR}/70-usb-scale.rules ${D}${sysconfdir}/udev/rules.d/70-usb-scale.rules
+
+	install -d ${D}/${systemd_system_unitdir}	
+	if [ "${NMS_MODE}" = "remote" ]; then
+        	bbplain "Compiling remote version"
+		install -m 0755 ${WORKDIR}/nms-server-remote.service ${D}/${systemd_system_unitdir}/nms-server.service
+    	else
+		bberror "Compiling HEC version"
+		install -m 0755 ${WORKDIR}/nms-server.service ${D}/${systemd_system_unitdir}/nms-server.service
+	fi
+	
 }
 

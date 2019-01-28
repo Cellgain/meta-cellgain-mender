@@ -1,6 +1,7 @@
 [Unit]
 Description=NMS Server
-After=systemd-resolved.service
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=idle
