@@ -10,7 +10,10 @@ SRC_URI += " \
 	file://eth-conf.sh \
 	file://start-ap.sh \
 	file://stop-ap.sh \
-	file://70-usb-scale.rules \
+	file://emmc-install.sh \
+	file://fw_env.config \
+	file://img-yocto.sdimg.tar.gz;unpack=0 \
+	file://70-custom-name.rules \
 	file://nms-server.service \
 	file://nms-server-remote.service \
 	"
@@ -35,7 +38,10 @@ SYSTEMD_SERVICE_${PN} = "nms-server.service \
 FILES_${PN} += "/data/nms-server/network/eth-conf.sh \
 		/data/nms-server/network/start-ap.sh \
 		${sysconfdir}/nms-server/stop-ap.sh \
-		${sysconfdir}/udev/rules.d/70-usb-scale.rules \
+		${sysconfdir}/emmc/emmc-install.sh \
+		${sysconfdir}/emmc/fw_env.config \
+		${sysconfdir}/emmc/img-yocto.sdimg.tar.gz \
+		${sysconfdir}/udev/rules.d/70-custom-name.rules \
                "
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
@@ -86,15 +92,20 @@ do_install() {
 	install -d ${D}/${sysconfdir}/nms-server    
 	install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 
+	install -d ${D}/${sysconfdir}/emmc    
+	install -m 0755 ${WORKDIR}/emmc-install.sh ${D}/${sysconfdir}/emmc/
+	install -m 0755 ${WORKDIR}/fw_env.config ${D}/${sysconfdir}/emmc/
+	install -m 0644 ${WORKDIR}/img-yocto.sdimg.tar.gz ${D}/${sysconfdir}/emmc/
+
 	install -d ${D}/data/nms-server/network
-        install -m 0644 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server/network
-	install -m 0644 ${WORKDIR}/start-ap.sh ${D}/data/nms-server/network
+        install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server/network
+	install -m 0755 ${WORKDIR}/start-ap.sh ${D}/data/nms-server/network
 	
 	ln -s /data/nms-server/network/eth-conf.sh  ${D}/${sysconfdir}/nms-server/
 	ln -s /data/nms-server/network/start-ap.sh  ${D}/${sysconfdir}/nms-server/
 
 	install -d ${D}${sysconfdir}/udev/rules.d
-	install -m 0644  ${WORKDIR}/70-usb-scale.rules ${D}${sysconfdir}/udev/rules.d/70-usb-scale.rules
+	install -m 0644  ${WORKDIR}/70-custom-name.rules ${D}${sysconfdir}/udev/rules.d/70-custom-name.rules
 
 	install -d ${D}/${systemd_system_unitdir}	
 	if [ "${NMS_MODE}" = "remote" ]; then
