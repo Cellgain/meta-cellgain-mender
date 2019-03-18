@@ -6,6 +6,9 @@ IMAGE_INSTALL_append = " \
     connman \
     connman-client \ 
     nms-server \
+    bootloader-usb \
     libusb1 \
+    cyflash\
+    python-pip \
 "
 
