@@ -31,7 +31,7 @@ CONF_VERSION = "1"
 ###################################################
 KERNEL_DEVICETREE = "am335x-boneblack.dtb"
 
-IMAGE_INSTALL_append = " net-snmp-server net-snmp-client net-snmp-libs net-snmp-mibs minicom libusb1 libusb1-dev usbutils"
+IMAGE_INSTALL_append = " net-snmp-server net-snmp-client net-snmp-libs net-snmp-mibs minicom libusb1 libusb1-dev usbutils nano"
 
 DISTRO_FEATURES = "ext2 usbhost ${DISTRO_FEATURES_LIBC} kernel-module-cdc-acm"
 
@@ -58,7 +58,7 @@ VIRTUAL-RUNTIME_initscripts = ""
 
 ARTIFACTIMG_FSTYPE = "ext4"
 
-MENDER_ARTIFACT_NAME = "cellgain-release-bbb-0.2.12"
+MENDER_ARTIFACT_NAME = "cellgain-release-bbb-0.2.15"
 
 INHERIT += "mender-full extrausers rm_work"
 
