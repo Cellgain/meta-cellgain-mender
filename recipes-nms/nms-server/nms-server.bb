@@ -6,7 +6,7 @@ B = "${WORKDIR}/build"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI += " \
-	git://cellgain.ddns.net:30000/cellgain-public/nms-server.git;protocol=http; \
+	git://cellgain.ddns.net:30000/cellgain-public/nms-server.git;protocol=http;branch=master \
 	file://eth-conf.sh \
 	file://start-ap.sh \
 	file://stop-ap.sh \
@@ -107,17 +107,17 @@ do_install() {
 	ln -s /data/nms-server/network/start-ap.sh  ${D}/${sysconfdir}/nms-server/
 
 	install -d ${D}/data/nms-server/snmp
-        install -m 0755 ${WORKDIR}/snmpd.conf ${D}/data/nms-server/snmp/
+    install -m 0755 ${WORKDIR}/snmpd.conf ${D}/data/nms-server/snmp/
 
 	install -d ${D}${sysconfdir}/udev/rules.d
 	install -m 0644  ${WORKDIR}/70-custom-name.rules ${D}${sysconfdir}/udev/rules.d/70-custom-name.rules
 
 	install -d ${D}/${systemd_system_unitdir}	
 	if [ "${NMS_MODE}" = "remote" ]; then
-        	bbplain "Compiling remote version"
+    	bbplain "Compiling remote version"
 		install -m 0755 ${WORKDIR}/nms-server-remote.service ${D}/${systemd_system_unitdir}/nms-server.service
-    	else
-		bberror "Compiling HEC version"
+	else
+		bbplain "Compiling HEC version"
 		install -m 0755 ${WORKDIR}/nms-server.service ${D}/${systemd_system_unitdir}/nms-server.service
 	fi
 }

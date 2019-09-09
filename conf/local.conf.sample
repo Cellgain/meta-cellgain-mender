@@ -58,7 +58,7 @@ VIRTUAL-RUNTIME_initscripts = ""
 
 ARTIFACTIMG_FSTYPE = "ext4"
 
-MENDER_ARTIFACT_NAME = "cellgain-release-bbb-0.2.15"
+MENDER_ARTIFACT_NAME = "cellgain-release-bbb-hec-1-20190901"
 
 INHERIT += "mender-full extrausers rm_work"
 
@@ -76,8 +76,8 @@ EXTRA_USERS_PARAMS = "usermod -P q1w2e3r4 root; "
 
 VIRTUAL-RUNTIME_snmp-manager = "net-snmp-server"
 
-NMS_MODE = "remote"
+#NMS_MODE = "remote"
+NMS_MODE = "hec-1"
 
 #autoload ethernet module at boot
 KERNEL_MODULE_AUTOLOAD += " cdc_acm"
-

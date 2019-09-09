@@ -7,7 +7,7 @@ After=network-online.target
 Type=idle
 User=root
 Group=root
-ExecStart=/usr/bin/nms-server
+ExecStart=/usr/bin/nms-server -mode=hec-1
 Restart=on-abort
 
 [Install]
