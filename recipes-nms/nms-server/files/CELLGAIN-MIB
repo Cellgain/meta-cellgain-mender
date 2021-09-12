@@ -1,0 +1,342 @@
+CELLGAIN-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS 
+  enterprises FROM RFC1155-SMI
+
+  MODULE-IDENTITY, enterprises, OBJECT-TYPE, Integer32 FROM SNMPv2-SMI;
+
+cellgain MODULE-IDENTITY
+  LAST-UPDATED "202007021334Z"
+  ORGANIZATION ""
+  CONTACT-INFO ""
+  DESCRIPTION  ""
+  ::= { enterprises 47182 }
+
+-- groups in cellgain
+
+nms OBJECT IDENTIFIER ::= { cellgain 1 } -- .47182.1
+
+cgNumberBackplanes OBJECT-TYPE
+  SYNTAX      Integer32
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The number of backplanes present on this system."
+  ::= { nms 1 } -- .47182.1.1
+
+cgBackplaneTable OBJECT-TYPE
+  SYNTAX      SEQUENCE OF CgBackplane
+  MAX-ACCESS  not-accessible
+  STATUS      current
+  DESCRIPTION
+    "A list of backplane entries.  The number of entries
+    is given by the value of cgNumberBackplanes."
+  ::= { nms 2 } -- .47182.1.2
+
+cgBackplane OBJECT-TYPE
+ SYNTAX      CgBackplane
+ MAX-ACCESS  not-accessible
+ STATUS      current
+ DESCRIPTION
+    "An entry containing information of particular backplane."
+ INDEX   { cgBackplaneIndex }
+ ::= { cgBackplaneTable 1 } -- .47182.1.2.1
+
+CgBackplane ::= SEQUENCE {
+  cgBackplaneIndex Integer32,
+  cgBackplaneDescr DisplayString,
+  cgBackplaneNumberSlot Integer32
+}
+
+cgBackplaneIndex OBJECT-TYPE
+  SYNTAX      Integer32
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgBackplane 1 } -- .47182.1.2.1.1
+
+cgBackplaneDescr OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgBackplane 2 } -- .47182.1.2.1.2
+
+cgBackplaneNumberSlot OBJECT-TYPE
+  SYNTAX      Integer32
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The number of slot present on the backplane."
+  ::= { cgBackplane 3 } -- .47182.1.2.1.3
+
+-- Slot table
+
+cgSlotTable OBJECT-TYPE
+  SYNTAX      SEQUENCE OF CgSlot
+  MAX-ACCESS  not-accessible
+  STATUS      current
+  DESCRIPTION
+    "A list of slot entries.  The number of entries
+    is given by the value of cgBackplaneNumberSlot."
+  ::= { nms 3 } -- .47182.1.3
+
+cgSlot OBJECT-TYPE
+ SYNTAX      CgSlot
+ MAX-ACCESS  not-accessible
+ STATUS      current
+ DESCRIPTION
+    "An entry containing information of particular slot."
+ INDEX  { 
+          cgBackplaneIndex,
+          cgSlotIndex 
+        }
+ ::= { cgSlotTable 1 } -- .47182.1.3.1
+
+CgSlot ::= SEQUENCE {
+  cgSlotIndex Integer32,
+  cgSlotDescr DisplayString,
+  cgSlotNumberDevice Integer32,
+  cgSlotStatus INTEGER
+}
+
+cgSlotIndex OBJECT-TYPE
+  SYNTAX      Integer32
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSlot 1 } -- .47182.1.3.1.1
+
+cgSlotDescr OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSlot 2 } -- .47182.1.3.1.2
+
+cgSlotNumberDevice OBJECT-TYPE
+  SYNTAX      Integer32
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The number of slot present on the backplane."
+  ::= { cgSlot 3 } -- .47182.1.3.1.3
+
+cgSlotStatus OBJECT-TYPE
+  SYNTAX  INTEGER {
+	   active(1),       
+	   standby(2),
+	   error(3)
+	}
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The status of slot present on the backplane."
+  ::= { cgSlot 4 } -- .47182.1.3.1.4
+
+-- Device table
+
+cgDeviceTable OBJECT-TYPE
+  SYNTAX      SEQUENCE OF CgDevice
+  MAX-ACCESS  not-accessible
+  STATUS      current
+  DESCRIPTION
+    "A list of devices entries.  The number of entries
+    is given by the value of cgSlotNumberDevice."
+  ::= { nms 4 } -- .47182.1.4
+
+cgDevice OBJECT-TYPE
+ SYNTAX      CgDevice
+ MAX-ACCESS  not-accessible
+ STATUS      current
+ DESCRIPTION
+    "An entry containing information of particular device."
+ INDEX  { 
+          cgBackplaneIndex,
+          cgSlotIndex,
+          cgDeviceIndex 
+        }
+ ::= { cgDeviceTable 1 } -- .47182.1.4.1
+
+CgDevice ::= SEQUENCE {
+  cgDeviceIndex Integer32,
+  cgDeviceDescr DisplayString,
+  cgDeviceSerial DisplayString,
+  cgDeviceFwVersion DisplayString,
+  cgDeviceProductID DisplayString,
+  cgDeviceAlarms Integer32
+}
+
+cgDeviceIndex OBJECT-TYPE
+  SYNTAX      Integer32
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgDevice 1 } -- .47182.1.4.1.1
+
+cgDeviceDescr OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgDevice 2 } -- .47182.1.4.1.2
+
+cgDeviceSerial OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgDevice 3 } -- .47182.1.4.1.3
+
+cgDeviceFwVersion OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgDevice 4 } -- .47182.1.4.1.4
+
+cgDeviceProductID OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgDevice 5 } -- .47182.1.4.1.5
+
+cgDeviceAlarms OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgDevice 6 } -- .47182.1.4.1.6
+
+
+  -- Sensors table
+
+cgSensorsTable OBJECT-TYPE
+  SYNTAX      SEQUENCE OF CgSensors
+  MAX-ACCESS  not-accessible
+  STATUS      current
+  DESCRIPTION
+    "A list of Sensors entries."
+  ::= { nms 5 } -- .47182.1.5
+
+cgSensors OBJECT-TYPE
+ SYNTAX      CgSensors
+ MAX-ACCESS  not-accessible
+ STATUS      current
+ DESCRIPTION
+    "An entry containing information of particular Sensors."
+ INDEX  { 
+          cgBackplaneIndex,
+          cgSlotIndex,
+          cgDeviceIndex
+        }
+ ::= { cgSensorsTable 1 } -- .47182.1.5.1
+
+CgSensors ::= SEQUENCE {
+  cgSensorsLaserBias DisplayString,
+  cgSensorsOpticalPower DisplayString,
+  cgSensorsRFPower DisplayString,
+  cgSensorsTemperature DisplayString,
+  cgSensorsRFPowerIn DisplayString,
+  cgSensorsRFPowerOut DisplayString
+}
+
+cgSensorsLaserBias OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSensors 1 } -- .47182.1.5.1.1
+
+cgSensorsOpticalPower OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSensors 2 } -- .47182.1.5.1.2
+
+cgSensorsRFPower OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSensors 3 } -- .47182.1.5.1.3
+
+cgSensorsTemperature OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSensors 4 } -- .47182.1.5.1.4
+
+cgSensorsRFPowerIn OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSensors 5 } -- .47182.1.5.1.5
+
+cgSensorsRFPowerOut OBJECT-TYPE	
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    ""
+  ::= { cgSensors 6 } -- .47182.1.5.1.6
+
+cgRole OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The role of NMS."
+  ::= { nms 6 } -- .47182.1.6
+
+cgRolePrimary OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The role of NMS."
+  ::= { nms 7 } -- .47182.1.7
+
+cgRoleSecondary OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The role of NMS."
+  ::= { nms 8 } -- .47182.1.8
+
+cgSwitchOverrideMode OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The switch override mode of NMS."
+  ::= { nms 9 } -- .47182.1.9
+
+cgSwitchOverrideStatus OBJECT-TYPE
+  SYNTAX      DisplayString (SIZE (0..255))
+  MAX-ACCESS  read-only
+  STATUS      current
+  DESCRIPTION
+    "The switch override status of NMS."
+  ::= { nms 10 } -- .47182.1.10
+END

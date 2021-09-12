@@ -1,0 +1,648 @@
+--- Starting bitbake server pid 22783 at 2019-09-16 13:54:11.973840 ---
+Started bitbake server pid 22783
+DEBUG: Found bblayers.conf (/home/jmoffa/Escritorio/yocto-rpi/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-python
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:751: including conf/machine/beaglebone-yocto.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp/conf/machine/beaglebone-yocto.conf:15: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+Entering server connection loop
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/terminal.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/staging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/mirrors.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utils.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utility-tasks.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/metadata_scm.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/logging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-helpers.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:1)
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:316: including mender-setup-bios.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:317: including mender-setup-grub.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:318: including mender-setup-image.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:319: including mender-setup-install.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:320: including mender-setup-systemd.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:321: including mender-setup-ubi.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:322: including mender-setup-uboot.inc
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3/classes/rpi-wifi.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-full.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/useradd_base.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass:16)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/packagedata.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/chrpath.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/insane.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/linuxloader.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'debug': 0, 'extra_assume_provided': [], 'server_timeout': None, 'invalidate_stamp': None, 'debug_domains': [], 'dry_run': False, 'abort': True, 'profile': False, 'verbose': False, 'prefile': [], 'postfile': [], 'force': False, 'dump_signatures': []}, {'CLUTTER_IM_MODULE': 'xim', 'SHLVL': '1', 'TERM': 'xterm', 'XDG_CURRENT_DESKTOP': 'Unity', 'DESKTOP_AUTOSTART_ID': '10aa822506e3b8ada31565663002358500000019370001', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'XDG_VTNR': '7', 'GNOME_KEYRING_CONTROL': '', 'DISPLAY': ':0', 'PWD': '/home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3', 'IM_CONFIG_PHASE': '1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GPG_AGENT_INFO': '/home/jmoffa/.gnupg/S.gpg-agent:0:1', 'DESKTOP_SESSION': 'ubuntu', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1461', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'LANG': 'es_AR.UTF-8', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', '_': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'BBPATH': '/home/jmoffa/Escritorio/yocto-rpi/build', 'SESSION': 'ubuntu', 'GTK_IM_MODULE': 'ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XDG_RUNTIME_DIR': '/run/user/1000', 'PERL_MB_OPT': '--install_base "/home/jmoffa/perl5"', 'LOGNAME': 'jmoffa', 'SESSION_MANAGER': 'local/FTA-AP-Uplink:@/tmp/.ICE-unix/1937,unix/FTA-AP-Uplink:/tmp/.ICE-unix/1937', 'QT4_IM_MODULE': 'xim', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PERL_MM_OPT': 'INSTALL_BASE=/home/jmoffa/perl5', 'XDG_SESSION_ID': 'c1', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'PERL5LIB': '/home/jmoffa/perl5/lib/perl5', 'LC_ALL': 'en_US.UTF-8', 'XAUTHORITY': '/home/jmoffa/.Xauthority', 'XMODIFIERS': '@im=ibus', 'GTK2_MODULES': 'overlay-scrollbar', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2234', 'USER': 'jmoffa', 'QT_ACCESSIBILITY': '1', 'BUILDDIR': '/home/jmoffa/Escritorio/yocto-rpi/build', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'PATH': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/scripts:/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin:/home/jmoffa/perl5/bin:/home/jmoffa/bin:/home/jmoffa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/jmoffa/go/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-YHo68aBSMe', 'GDMSESSION': 'ubuntu', 'JOB': 'dbus', 'GDM_LANG': 'es', 'GNOME_KEYRING_PID': '', 'GUAKE_TAB_UUID': 'a772c65f-9671-49dc-943b-d123dbc4708c', 'PERL_LOCAL_LIB_ROOT': '/home/jmoffa/perl5', 'INSTANCE': '', 'QT_IM_MODULE': 'ibus', 'LANGUAGE': 'es_AR:es', 'HOME': '/home/jmoffa', 'XDG_SESSION_TYPE': 'x11', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/jmoffa', 'XDG_SEAT': 'seat0', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'OLDPWD': '/home/jmoffa/Escritorio/yocto-rpi', 'SESSIONTYPE': 'gnome-session', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'SHELL': '/bin/bash', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/jmoffa/.config/autostart/guake.desktop'}, ['/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'nms-server']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['nms-server'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 31853 at 2019-09-16 14:06:57.890868 ---
+Started bitbake server pid 31853
+DEBUG: Found bblayers.conf (/home/jmoffa/Escritorio/yocto-rpi/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-python
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:751: including conf/machine/beaglebone-yocto.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp/conf/machine/beaglebone-yocto.conf:15: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+Entering server connection loop
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/terminal.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/staging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/mirrors.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utils.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utility-tasks.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/metadata_scm.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/logging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-helpers.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:1)
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:316: including mender-setup-bios.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:317: including mender-setup-grub.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:318: including mender-setup-image.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:319: including mender-setup-install.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:320: including mender-setup-systemd.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:321: including mender-setup-ubi.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:322: including mender-setup-uboot.inc
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3/classes/rpi-wifi.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-full.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/useradd_base.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass:16)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/packagedata.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/chrpath.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/insane.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/linuxloader.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'debug_domains': [], 'force': False, 'profile': False, 'postfile': [], 'extra_assume_provided': [], 'dry_run': False, 'prefile': [], 'verbose': False, 'dump_signatures': [], 'server_timeout': None, 'invalidate_stamp': None, 'debug': 0, 'abort': True}, {'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'CLUTTER_IM_MODULE': 'xim', 'TERM': 'xterm', 'USER': 'jmoffa', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/jmoffa', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'DESKTOP_AUTOSTART_ID': '10aa822506e3b8ada31565663002358500000019370001', 'XMODIFIERS': '@im=ibus', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'XDG_MENU_PREFIX': 'gnome-', 'PERL_LOCAL_LIB_ROOT': '/home/jmoffa/perl5', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'GTK2_MODULES': 'overlay-scrollbar', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1461', 'GDMSESSION': 'ubuntu', 'INSTANCE': '', 'GPG_AGENT_INFO': '/home/jmoffa/.gnupg/S.gpg-agent:0:1', 'DESKTOP_SESSION': 'ubuntu', 'PWD': '/home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SHLVL': '1', 'XDG_SESSION_TYPE': 'x11', 'JOB': 'dbus', '_': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'XDG_SESSION_ID': 'c1', 'PERL_MB_OPT': '--install_base "/home/jmoffa/perl5"', 'XDG_CURRENT_DESKTOP': 'Unity', 'SESSION': 'ubuntu', 'XDG_VTNR': '7', 'XDG_SESSION_DESKTOP': 'ubuntu', 'SESSION_MANAGER': 'local/FTA-AP-Uplink:@/tmp/.ICE-unix/1937,unix/FTA-AP-Uplink:/tmp/.ICE-unix/1937', 'BBPATH': '/home/jmoffa/Escritorio/yocto-rpi/build', 'LC_ALL': 'en_US.UTF-8', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2234', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/jmoffa/.config/autostart/guake.desktop', 'QT4_IM_MODULE': 'xim', 'BUILDDIR': '/home/jmoffa/Escritorio/yocto-rpi/build', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'QT_ACCESSIBILITY': '1', 'SHELL': '/bin/bash', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'DISPLAY': ':0', 'LANGUAGE': 'es_AR:es', 'OLDPWD': '/home/jmoffa/Escritorio/yocto-rpi', 'PERL_MM_OPT': 'INSTALL_BASE=/home/jmoffa/perl5', 'LANG': 'es_AR.UTF-8', 'PATH': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/scripts:/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin:/home/jmoffa/perl5/bin:/home/jmoffa/bin:/home/jmoffa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/jmoffa/go/bin', 'QT_IM_MODULE': 'ibus', 'GUAKE_TAB_UUID': 'a772c65f-9671-49dc-943b-d123dbc4708c', 'GNOME_KEYRING_CONTROL': '', 'GDM_LANG': 'es', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'HOME': '/home/jmoffa', 'XDG_SEAT': 'seat0', 'SESSIONTYPE': 'gnome-session', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'IM_CONFIG_PHASE': '1', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'LOGNAME': 'jmoffa', 'GNOME_KEYRING_PID': '', 'GTK_IM_MODULE': 'ibus', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'PERL5LIB': '/home/jmoffa/perl5/lib/perl5', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XAUTHORITY': '/home/jmoffa/.Xauthority', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-YHo68aBSMe'}, ['/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'nms-server']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['nms-server'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 8729 at 2019-09-16 14:29:42.582583 ---
+Started bitbake server pid 8729
+DEBUG: Found bblayers.conf (/home/jmoffa/Escritorio/yocto-rpi/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-python
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:751: including conf/machine/beaglebone-yocto.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp/conf/machine/beaglebone-yocto.conf:15: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+Entering server connection loop
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/terminal.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/staging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/mirrors.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utils.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utility-tasks.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/metadata_scm.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/logging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-helpers.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:1)
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:316: including mender-setup-bios.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:317: including mender-setup-grub.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:318: including mender-setup-image.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:319: including mender-setup-install.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:320: including mender-setup-systemd.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:321: including mender-setup-ubi.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:322: including mender-setup-uboot.inc
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3/classes/rpi-wifi.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-full.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/useradd_base.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass:16)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/packagedata.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/chrpath.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/insane.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/linuxloader.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'debug_domains': [], 'dry_run': False, 'debug': 0, 'extra_assume_provided': [], 'server_timeout': None, 'profile': False, 'invalidate_stamp': None, 'dump_signatures': [], 'verbose': False, 'abort': True, 'force': False, 'postfile': [], 'prefile': []}, {'QT_ACCESSIBILITY': '1', 'USER': 'jmoffa', 'SESSIONTYPE': 'gnome-session', 'PERL_LOCAL_LIB_ROOT': '/home/jmoffa/perl5', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'LOGNAME': 'jmoffa', 'GTK_IM_MODULE': 'ibus', 'DISPLAY': ':0', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/jmoffa/.config/autostart/guake.desktop', 'DESKTOP_SESSION': 'ubuntu', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-YHo68aBSMe', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'XDG_SEAT': 'seat0', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2234', 'LANGUAGE': 'es_AR:es', 'DESKTOP_AUTOSTART_ID': '10aa822506e3b8ada31565663002358500000019370001', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/jmoffa', 'PERL_MM_OPT': 'INSTALL_BASE=/home/jmoffa/perl5', 'SESSION_MANAGER': 'local/FTA-AP-Uplink:@/tmp/.ICE-unix/1937,unix/FTA-AP-Uplink:/tmp/.ICE-unix/1937', 'SESSION': 'ubuntu', 'GDMSESSION': 'ubuntu', 'TERM': 'xterm', 'PWD': '/home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3', 'HOME': '/home/jmoffa', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'XDG_VTNR': '7', 'XDG_SESSION_TYPE': 'x11', 'IM_CONFIG_PHASE': '1', 'GNOME_KEYRING_PID': '', 'JOB': 'dbus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'BBPATH': '/home/jmoffa/Escritorio/yocto-rpi/build', 'OLDPWD': '/home/jmoffa/Escritorio/yocto-rpi', 'CLUTTER_IM_MODULE': 'xim', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SHLVL': '1', 'QT_IM_MODULE': 'ibus', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'PERL_MB_OPT': '--install_base "/home/jmoffa/perl5"', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_SESSION_ID': 'c1', 'GDM_LANG': 'es', 'SHELL': '/bin/bash', 'GUAKE_TAB_UUID': 'a772c65f-9671-49dc-943b-d123dbc4708c', 'INSTANCE': '', 'GPG_AGENT_INFO': '/home/jmoffa/.gnupg/S.gpg-agent:0:1', 'LC_ALL': 'en_US.UTF-8', 'XAUTHORITY': '/home/jmoffa/.Xauthority', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1461', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'BUILDDIR': '/home/jmoffa/Escritorio/yocto-rpi/build', 'QT4_IM_MODULE': 'xim', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'GNOME_KEYRING_CONTROL': '', 'XDG_CURRENT_DESKTOP': 'Unity', 'LANG': 'es_AR.UTF-8', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'PATH': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/scripts:/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin:/home/jmoffa/perl5/bin:/home/jmoffa/bin:/home/jmoffa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/jmoffa/go/bin', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'PERL5LIB': '/home/jmoffa/perl5/lib/perl5', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'GTK2_MODULES': 'overlay-scrollbar', '_': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XMODIFIERS': '@im=ibus'}, ['/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'nms-server']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['nms-server'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 14780 at 2019-09-16 14:37:16.242108 ---
+Started bitbake server pid 14780
+DEBUG: Found bblayers.conf (/home/jmoffa/Escritorio/yocto-rpi/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-python
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:751: including conf/machine/beaglebone-yocto.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp/conf/machine/beaglebone-yocto.conf:15: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+Entering server connection loop
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/terminal.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/staging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/mirrors.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utils.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utility-tasks.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/metadata_scm.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/logging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-helpers.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:1)
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:316: including mender-setup-bios.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:317: including mender-setup-grub.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:318: including mender-setup-image.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:319: including mender-setup-install.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:320: including mender-setup-systemd.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:321: including mender-setup-ubi.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:322: including mender-setup-uboot.inc
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3/classes/rpi-wifi.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-full.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/useradd_base.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass:16)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/packagedata.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/chrpath.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/insane.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/linuxloader.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'server_timeout': None, 'debug': 0, 'abort': True, 'verbose': False, 'profile': False, 'invalidate_stamp': None, 'debug_domains': [], 'force': False, 'prefile': [], 'dump_signatures': [], 'extra_assume_provided': [], 'dry_run': False, 'postfile': []}, {'GPG_AGENT_INFO': '/home/jmoffa/.gnupg/S.gpg-agent:0:1', 'OLDPWD': '/home/jmoffa/Escritorio/yocto-rpi', 'GNOME_KEYRING_CONTROL': '', 'LC_ALL': 'en_US.UTF-8', 'TERM': 'xterm', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2234', 'PWD': '/home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3', 'GUAKE_TAB_UUID': 'a772c65f-9671-49dc-943b-d123dbc4708c', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'SHLVL': '1', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'XAUTHORITY': '/home/jmoffa/.Xauthority', 'PERL_MM_OPT': 'INSTALL_BASE=/home/jmoffa/perl5', 'XDG_SESSION_TYPE': 'x11', 'QT4_IM_MODULE': 'xim', 'SESSION': 'ubuntu', 'HOME': '/home/jmoffa', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'BUILDDIR': '/home/jmoffa/Escritorio/yocto-rpi/build', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', '_': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CLUTTER_IM_MODULE': 'xim', 'GTK_IM_MODULE': 'ibus', 'DESKTOP_SESSION': 'ubuntu', 'GTK2_MODULES': 'overlay-scrollbar', 'SHELL': '/bin/bash', 'LOGNAME': 'jmoffa', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/jmoffa/.config/autostart/guake.desktop', 'PERL_LOCAL_LIB_ROOT': '/home/jmoffa/perl5', 'JOB': 'dbus', 'XMODIFIERS': '@im=ibus', 'SESSIONTYPE': 'gnome-session', 'PATH': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/scripts:/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin:/home/jmoffa/perl5/bin:/home/jmoffa/bin:/home/jmoffa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/jmoffa/go/bin', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'XDG_SESSION_ID': 'c1', 'QT_ACCESSIBILITY': '1', 'XDG_SEAT': 'seat0', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/jmoffa', 'XDG_MENU_PREFIX': 'gnome-', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'DESKTOP_AUTOSTART_ID': '10aa822506e3b8ada31565663002358500000019370001', 'XDG_CURRENT_DESKTOP': 'Unity', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'IM_CONFIG_PHASE': '1', 'GDMSESSION': 'ubuntu', 'PERL5LIB': '/home/jmoffa/perl5/lib/perl5', 'XDG_VTNR': '7', 'SESSION_MANAGER': 'local/FTA-AP-Uplink:@/tmp/.ICE-unix/1937,unix/FTA-AP-Uplink:/tmp/.ICE-unix/1937', 'LANG': 'es_AR.UTF-8', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1461', 'GDM_LANG': 'es', 'DISPLAY': ':0', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'USER': 'jmoffa', 'GNOME_KEYRING_PID': '', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'INSTANCE': '', 'BBPATH': '/home/jmoffa/Escritorio/yocto-rpi/build', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'XDG_SESSION_DESKTOP': 'ubuntu', 'PERL_MB_OPT': '--install_base "/home/jmoffa/perl5"', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'XDG_RUNTIME_DIR': '/run/user/1000', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'LANGUAGE': 'es_AR:es', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-YHo68aBSMe'}, ['/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'nms-server']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['nms-server'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 17851 at 2019-09-19 13:52:09.368580 ---
+Started bitbake server pid 17851
+DEBUG: Found bblayers.conf (/home/jmoffa/Escritorio/yocto-rpi/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-python
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:751: including conf/machine/beaglebone-yocto.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp/conf/machine/beaglebone-yocto.conf:15: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+Entering server connection loop
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/terminal.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/staging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/mirrors.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utils.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utility-tasks.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/metadata_scm.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/logging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-helpers.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:1)
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:316: including mender-setup-bios.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:317: including mender-setup-grub.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:318: including mender-setup-image.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:319: including mender-setup-install.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:320: including mender-setup-systemd.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:321: including mender-setup-ubi.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:322: including mender-setup-uboot.inc
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3/classes/rpi-wifi.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-full.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/useradd_base.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass:16)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/packagedata.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/chrpath.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/insane.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/linuxloader.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'postfile': [], 'debug': 0, 'prefile': [], 'extra_assume_provided': [], 'profile': False, 'dump_signatures': [], 'server_timeout': None, 'dry_run': False, 'verbose': False, 'invalidate_stamp': None, 'debug_domains': [], 'force': False}, {'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'XMODIFIERS': '@im=ibus', 'SESSION': 'ubuntu', 'GNOME_KEYRING_PID': '', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'SHLVL': '1', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/jmoffa/.config/autostart/guake.desktop', 'TERM': 'xterm', 'OLDPWD': '/home/jmoffa/Escritorio/yocto-rpi', 'PERL_LOCAL_LIB_ROOT': '/home/jmoffa/perl5', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'XDG_SESSION_TYPE': 'x11', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/jmoffa', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-YHo68aBSMe', '_': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'SESSION_MANAGER': 'local/FTA-AP-Uplink:@/tmp/.ICE-unix/1937,unix/FTA-AP-Uplink:/tmp/.ICE-unix/1937', 'LC_ALL': 'en_US.UTF-8', 'GTK_IM_MODULE': 'ibus', 'IM_CONFIG_PHASE': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2234', 'DESKTOP_AUTOSTART_ID': '10aa822506e3b8ada31565663002358500000019370001', 'BUILDDIR': '/home/jmoffa/Escritorio/yocto-rpi/build', 'GUAKE_TAB_UUID': 'a772c65f-9671-49dc-943b-d123dbc4708c', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1461', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_KEYRING_CONTROL': '', 'PERL_MM_OPT': 'INSTALL_BASE=/home/jmoffa/perl5', 'PWD': '/home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3', 'LOGNAME': 'jmoffa', 'BBPATH': '/home/jmoffa/Escritorio/yocto-rpi/build', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GTK2_MODULES': 'overlay-scrollbar', 'XDG_SESSION_ID': 'c1', 'XDG_SESSION_DESKTOP': 'ubuntu', 'USER': 'jmoffa', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GDM_LANG': 'es', 'QT4_IM_MODULE': 'xim', 'PERL5LIB': '/home/jmoffa/perl5/lib/perl5', 'DISPLAY': ':0', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'QT_ACCESSIBILITY': '1', 'XDG_CURRENT_DESKTOP': 'Unity', 'CLUTTER_IM_MODULE': 'xim', 'LANGUAGE': 'es_AR:es', 'XAUTHORITY': '/home/jmoffa/.Xauthority', 'SESSIONTYPE': 'gnome-session', 'XDG_SEAT': 'seat0', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'LANG': 'es_AR.UTF-8', 'XDG_VTNR': '7', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'QT_IM_MODULE': 'ibus', 'GDMSESSION': 'ubuntu', 'INSTANCE': '', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'PERL_MB_OPT': '--install_base "/home/jmoffa/perl5"', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JOB': 'dbus', 'PATH': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/scripts:/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin:/home/jmoffa/perl5/bin:/home/jmoffa/bin:/home/jmoffa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/jmoffa/go/bin', 'GPG_AGENT_INFO': '/home/jmoffa/.gnupg/S.gpg-agent:0:1', 'SHELL': '/bin/bash', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'HOME': '/home/jmoffa'}, ['/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'nms-server']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['nms-server'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 23867 at 2019-09-19 14:00:49.641377 ---
+Started bitbake server pid 23867
+DEBUG: Found bblayers.conf (/home/jmoffa/Escritorio/yocto-rpi/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-python
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core
+DEBUG: Adding layer /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:751: including conf/machine/beaglebone-yocto.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-yocto-bsp/conf/machine/beaglebone-yocto.conf:15: including conf/machine/include/tune-cortexa8.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/tune-cortexa8.inc:3: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+Entering server connection loop
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/terminal.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/staging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/mirrors.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utils.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/utility-tasks.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/metadata_scm.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/logging.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-helpers.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:1)
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:316: including mender-setup-bios.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:317: including mender-setup-grub.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:318: including mender-setup-image.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:319: including mender-setup-install.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:320: including mender-setup-systemd.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:321: including mender-setup-ubi.inc
+DEBUG: CONF /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-setup.bbclass:322: including mender-setup-uboot.inc
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3/classes/rpi-wifi.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/meta-mender/meta-mender-core/classes/mender-full.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/useradd_base.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/extrausers.bbclass:16)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/rm_work.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/packagedata.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/chrpath.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/insane.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/linuxloader.bbclass (from /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/jmoffa/Escritorio/yocto-rpi/src/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/jmoffa/Escritorio/yocto-rpi/build/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'postfile': [], 'abort': True, 'dump_signatures': [], 'debug_domains': [], 'force': False, 'server_timeout': None, 'profile': False, 'prefile': [], 'verbose': False, 'debug': 0, 'extra_assume_provided': [], 'dry_run': False, 'invalidate_stamp': None}, {'PERL_LOCAL_LIB_ROOT': '/home/jmoffa/perl5', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1461', 'TERM': 'xterm', 'JOB': 'dbus', 'GDM_LANG': 'es', 'XDG_SESSION_TYPE': 'x11', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GNOME_KEYRING_CONTROL': '', 'CLUTTER_IM_MODULE': 'xim', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'XDG_SESSION_ID': 'c1', 'PERL5LIB': '/home/jmoffa/perl5/lib/perl5', 'LOGNAME': 'jmoffa', 'DESKTOP_AUTOSTART_ID': '10aa822506e3b8ada31565663002358500000019370001', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'SHLVL': '1', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'PERL_MB_OPT': '--install_base "/home/jmoffa/perl5"', 'LANGUAGE': 'es_AR:es', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'IM_CONFIG_PHASE': '1', 'GTK_IM_MODULE': 'ibus', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2234', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'GPG_AGENT_INFO': '/home/jmoffa/.gnupg/S.gpg-agent:0:1', 'PERL_MM_OPT': 'INSTALL_BASE=/home/jmoffa/perl5', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'GUAKE_TAB_UUID': 'a772c65f-9671-49dc-943b-d123dbc4708c', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'DESKTOP_SESSION': 'ubuntu', 'SESSION_MANAGER': 'local/FTA-AP-Uplink:@/tmp/.ICE-unix/1937,unix/FTA-AP-Uplink:/tmp/.ICE-unix/1937', 'BBPATH': '/home/jmoffa/Escritorio/yocto-rpi/build', 'PATH': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/scripts:/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin:/home/jmoffa/perl5/bin:/home/jmoffa/bin:/home/jmoffa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/jmoffa/go/bin', 'DISPLAY': ':0', 'INSTANCE': '', 'GTK2_MODULES': 'overlay-scrollbar', 'HOME': '/home/jmoffa', 'USER': 'jmoffa', 'XDG_SEAT': 'seat0', 'QT4_IM_MODULE': 'xim', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-YHo68aBSMe', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_MENU_PREFIX': 'gnome-', 'OLDPWD': '/home/jmoffa/Escritorio/yocto-rpi', 'GDMSESSION': 'ubuntu', 'PWD': '/home/jmoffa/Escritorio/yocto-rpi/src/meta-cellgain-mender-rpi3', 'XDG_RUNTIME_DIR': '/run/user/1000', '_': '/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'XDG_CURRENT_DESKTOP': 'Unity', 'SESSION': 'ubuntu', 'SHELL': '/bin/bash', 'GIO_LAUNCHED_DESKTOP_FILE': '/home/jmoffa/.config/autostart/guake.desktop', 'GNOME_KEYRING_PID': '', 'XAUTHORITY': '/home/jmoffa/.Xauthority', 'QT_IM_MODULE': 'ibus', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/jmoffa', 'XMODIFIERS': '@im=ibus', 'QT_ACCESSIBILITY': '1', 'LANG': 'es_AR.UTF-8', 'SESSIONTYPE': 'gnome-session', 'BUILDDIR': '/home/jmoffa/Escritorio/yocto-rpi/build', 'LC_ALL': 'en_US.UTF-8', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'XDG_VTNR': '7', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh'}, ['/home/jmoffa/Escritorio/yocto-rpi/src/poky/bitbake/bin/bitbake', 'core-image-full-cmdline']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['core-image-full-cmdline'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
