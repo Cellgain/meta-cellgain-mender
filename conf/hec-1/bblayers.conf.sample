@@ -1,0 +1,23 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+
+
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+POKYROOT = "/home/jmoffa/Escritorio/Yocto/Commons/src"
+
+BBLAYERS ?= " \
+  ${POKYROOT}/poky/meta \
+  ${POKYROOT}/poky/meta-poky \
+  ${POKYROOT}/poky/meta-yocto-bsp \
+  ${POKYROOT}/meta-openembedded/meta-oe \
+  ${POKYROOT}/meta-openembedded/meta-python \
+  ${POKYROOT}/meta-openembedded/meta-networking \
+  ${POKYROOT}/meta-mender/meta-mender-core \
+  ${POKYROOT}/meta-cellgain-mender-rpi3 \
+  "
+
+  
+

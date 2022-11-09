@@ -4,15 +4,15 @@ S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
 SRC_URI += " \
-	git://cellgain.ddns.net:30000/cellgain-public/bootloader-usb.git;protocol=http; \
+	git://git@github.com:/Cellgain/bootloader-usb.git;protocol=ssh \
 	"
 SRCREV = "${AUTOREV}"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-DEPENDS += "	go-cross-${TARGET_ARCH} \	   
-		libusb1 \
+#go-cross-${TARGET_ARCH}
+DEPENDS += "	libusb1 \
 		pkgconfig \
 	"
 RDEPENDS_${PN} = "bash"

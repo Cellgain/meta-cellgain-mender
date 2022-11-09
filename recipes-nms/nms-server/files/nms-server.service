@@ -8,7 +8,8 @@ Type=idle
 User=root
 Group=root
 ExecStart=/usr/bin/nms-server -mode=hec-1
-Restart=on-abort
+Restart=on-failure
+RestartSec=1000ms
 
 [Install]
 WantedBy=multi-user.target

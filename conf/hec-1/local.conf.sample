@@ -1,0 +1,126 @@
+MACHINE ??= "qemux86"
+
+DISTRO ?= "poky"
+
+PACKAGE_CLASSES ?= "package_rpm"
+
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+
+USER_CLASSES ?= "buildstats image-mklibs image-prelink"
+
+PATCHRESOLVE = "noop"
+
+BB_DISKMON_DIRS ??= "\
+    STOPTASKS,${TMPDIR},1G,100K \ 
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K \
+    ABORT,/tmp,10M,1K"
+
+PACKAGECONFIG_append_pn-qemu-native = " sdl"
+PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
+CONF_VERSION = "1"
+
+###################################################
+###
+### Configuration added by yocto-mender-rpi3.sh
+###
+###################################################
+
+# A MACHINE integrated with Mender.
+MACHINE = "beaglebone-yocto"
+
+#PREFERRED_PROVIDER_virtual/kernel = "linux-ti-staging"
+
+SSTATE_DIR = "/home/jmoffa/Escritorio/Yocto/Commons/sstate-cache"
+DL_DIR = "/home/jmoffa/Escritorio/Yocto/Commons/downloads"
+TMPDIR = "/home/jmoffa/Escritorio/Yocto/Commons/tmp"
+
+NOW = "${@time.strftime('%Y%m%d',time.gmtime())}"
+#NMS_MODE = "remote"
+NMS_MODE = "hec-1"
+NMS_BRANCH = "feature/microservices"
+
+MENDER_ARTIFACT_NAME := "${MACHINE}-${NMS_MODE}-${NOW}"
+#MENDER_DATA_PART_SIZE_MB = "2048"
+
+###################################################
+# /dev/mmcblk1 is for emmc
+MENDER_STORAGE_DEVICE = "/dev/mmcblk1"
+MENDER_UBOOT_STORAGE_INTERFACE = "mmc"
+MENDER_UBOOT_STORAGE_DEVICE = "1" 
+###################################################
+# /dev/mmcblk0 is for sdcard
+#MENDER_STORAGE_DEVICE = "/dev/mmcblk0"
+#MENDER_UBOOT_STORAGE_INTERFACE = "mmc"
+#MENDER_UBOOT_STORAGE_DEVICE = "0" 
+###################################################
+
+MENDER_SERVER_URL = "https://mender-cellgain.ddns.net"
+MENDER_UPDATE_POLL_INTERVAL_SECONDS = "60"
+MENDER_INVENTORY_POLL_INTERVAL_SECONDS = "60"
+#MENDER_STORAGE_TOTAL_SIZE_MB = "1024"
+
+#MENDER_ARTIFACT_EXTRA_ARGS_append = " -v 2"
+#IMAGE_INSTALL_append = " mender-migrate-configuration"
+#PACKAGECONFIG_remove = "split-mender-config"
+#MENDER_PERSISTENT_CONFIGURATION_VARS = "RootfsPartA RootfsPartB"
+IMAGE_ROOTFS_SIZE = "406250"
+
+
+KERNEL_DEVICETREE = "am335x-boneblack.dtb"
+MENDER_DTB_NAME_FORCE = "am335x-boneblack.dtb"
+
+MENDER_FEATURES_ENABLE_append = " mender-image mender-image-sd  mender-uboot"
+MENDER_FEATURES_DISABLE_append = " mender-grub mender-image-uefi"
+
+IMAGE_INSTALL_append = " net-snmp-server net-snmp-client net-snmp-libs net-snmp-mibs minicom libusb1 libusb1-dev usbutils nano xz libgpiod go"
+# mariadb libmysqlclient-dev
+#EXTRA_IMAGE_FEATURES += "dev-pkgs tools-sdk"
+
+PREFERRED_VERSION_net-snmp-server = "5.7.3"
+GOVERSION = "1.19%"
+
+DISTRO_FEATURES = "ext2 usbhost ${DISTRO_FEATURES_LIBC} kernel-module-cdc-acm"
+
+PREFERRED_PROVIDER_udev = "eudev"
+#PREFERRED_PROVIDER_u-boot-default-env = "u-boot"
+# remove pulseaudio since it brings in x11
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "pulseaudio opengl"
+
+PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
+
+PACKAGE_CLASSES = "package_ipk"
+
+# i686 or x86_64
+SDKMACHINE = "x86_64"
+
+# Use the same type here as specified in ARTIFACTIMG_FSTYPE to avoid
+# building an unneeded image file.
+SDIMG_ROOTFS_TYPE = "ext4"
+
+DISTRO_FEATURES_append = " systemd"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+VIRTUAL-RUNTIME_initscripts = ""
+
+#autoload ethernet module at boot
+KERNEL_MODULE_AUTOLOAD += " cdc_acm"
+
+ARTIFACTIMG_FSTYPE = "ext4"
+
+EXTRA_USERS_PARAMS = "usermod -P q1w2e3r4 root; "
+
+INHERIT += "extrausers mender-full rm_work"
+RM_WORK_EXCLUDE += "nms-server"
+
+VIRTUAL-RUNTIME_snmp-manager = " net-snmp-server"
+
+PACKAGECONFIG_remove_pn-mender-client = " inventory-network-scripts"
+
+PARALLEL_MAKE = "-j 12"
+
+BB_NUMBER_THREADS = "23"
