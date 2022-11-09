@@ -3,7 +3,7 @@ DESCRIPTION = "NMS Server"
 S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
-# FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 
 #git://github.com/moffa90/nms-server.git;branch=master
@@ -84,7 +84,7 @@ do_compile() {
 }
 
 do_install() {
-	#install -d ${D}/${bindir}
+	install -d ${D}/${bindir}
 
 	GOOS=$(eval $(${GO} env) && echo $GOOS)
 	GOARCH=$(eval $(${GO} env) && echo $GOARCH)
