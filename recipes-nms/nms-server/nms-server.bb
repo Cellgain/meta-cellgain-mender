@@ -3,7 +3,7 @@ DESCRIPTION = "NMS Server"
 S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 
 #git://github.com/moffa90/nms-server.git;branch=master
@@ -33,7 +33,7 @@ DEPENDS += "	libusb1 \
 	"
 RDEPENDS_${PN} = "bash"
 
-SRC_URI_append += "file://nms-server.service \
+SRC_URI:append += "file://nms-server.service \
                  "
 inherit systemd pkgconfig
 

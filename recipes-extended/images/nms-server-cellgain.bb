@@ -21,12 +21,12 @@ KERNEL_DEVICETREE = "am335x-boneblack.dtb"
 
 DISTRO_FEATURES = "ext2 usbhost ${DISTRO_FEATURES_LIBC} kernel-module-cdc-acm"
 
-PREFERRED_PROVIDER_udev = "eudev"
+PREFERRED_PROVIDER:udev = "eudev"
 
 # remove pulseaudio since it brings in x11
 DISTRO_FEATURES_BACKFILL_CONSIDERED += "pulseaudio opengl"
 
-PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
+PREFERRED_PROVIDER:jpeg = "libjpeg-turbo"
 
 PACKAGE_CLASSES = "package_ipk"
 
@@ -37,10 +37,10 @@ SDKMACHINE = "x86_64"
 # building an unneeded image file.
 SDIMG_ROOTFS_TYPE = "ext4"
 
-DISTRO_FEATURES_append = " systemd"
-VIRTUAL-RUNTIME_init_manager = "systemd"
+DISTRO_FEATURES:append = " systemd"
+VIRTUAL-RUNTIME:init_manager = "systemd"
 DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
-VIRTUAL-RUNTIME_initscripts = ""
+VIRTUAL-RUNTIME:initscripts = ""
 
 #autoload ethernet module at boot
 KERNEL_MODULE_AUTOLOAD += " cdc_acm"
@@ -51,6 +51,6 @@ EXTRA_USERS_PARAMS = "usermod -P q1w2e3r4 root; "
 
 INHERIT += "extrausers rm_work mender-full "
 
-VIRTUAL-RUNTIME_snmp-manager = " net-snmp-server"
+VIRTUAL-RUNTIME:snmp-manager = " net-snmp-server"
 
 inherit core-image
