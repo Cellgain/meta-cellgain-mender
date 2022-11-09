@@ -1,5 +1,5 @@
 
-IMAGE_INSTALL_append = " \
+IMAGE_INSTALL:append = " \
     connman \
     connman-client \ 
     nms-server \
