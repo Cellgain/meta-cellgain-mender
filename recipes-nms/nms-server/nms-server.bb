@@ -3,7 +3,7 @@ DESCRIPTION = "NMS Server"
 S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+# FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 
 #git://github.com/moffa90/nms-server.git;branch=master
@@ -84,7 +84,7 @@ do_compile() {
 }
 
 do_install() {
-	install -d ${D}/${bindir}
+	#install -d ${D}/${bindir}
 
 	GOOS=$(eval $(${GO} env) && echo $GOOS)
 	GOARCH=$(eval $(${GO} env) && echo $GOARCH)
@@ -94,35 +94,35 @@ do_install() {
 	# ${GOPATH}/bin; handle cross compiled case only
 	install -t ${D}/${bindir} -m 0755 ${B}/bin/${GOOS}_${GOARCH}/web
 
-	install -d ${D}/${systemd_unitdir}/system
+	# install -d ${D}/${systemd_unitdir}/system
 	install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
 
 	install -d ${D}/${localstatedir}/lib/nms-server
 
-	install -d ${D}/${sysconfdir}/nms-server    
+	# install -d ${D}/${sysconfdir}/nms-server    
 	install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 	install -m 0644 ${WORKDIR}/CELLGAIN-MIB	 ${D}/${sysconfdir}/nms-server/
 	install -m 0644 ${WORKDIR}/am335x-boneblack.dtb ${D}/${sysconfdir}/nms-server/
 
-	install -d ${D}/${sysconfdir}/emmc    
+	# install -d ${D}/${sysconfdir}/emmc    
 	install -m 0755 ${WORKDIR}/emmc-install.sh ${D}/${sysconfdir}/emmc/
 	install -m 0755 ${WORKDIR}/fw_env.config ${D}/${sysconfdir}/emmc/
 	install -m 0644 ${WORKDIR}/img-yocto.sdimg.tar.xz ${D}/${sysconfdir}/emmc/
 
-	install -d ${D}/data/nms-server/network
+	# install -d ${D}/data/nms-server/network
     install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server/network
 	install -m 0755 ${WORKDIR}/start-ap.sh ${D}/data/nms-server/network
 	
 	ln -s /data/nms-server/network/eth-conf.sh  ${D}/${sysconfdir}/nms-server/
 	ln -s /data/nms-server/network/start-ap.sh  ${D}/${sysconfdir}/nms-server/
 
-	install -d ${D}/data/nms-server/snmp
+	# install -d ${D}/data/nms-server/snmp
 	install -m 0755 ${WORKDIR}/snmpd.conf ${D}/data/nms-server/snmp/
 
-	install -d ${D}${sysconfdir}/udev/rules.d
+	# install -d ${D}${sysconfdir}/udev/rules.d
 	install -m 0644  ${WORKDIR}/70-custom-name.rules ${D}${sysconfdir}/udev/rules.d/70-custom-name.rules
 
-	install -d ${D}/${systemd_system_unitdir}	
+	# install -d ${D}/${systemd_system_unitdir}	
 	if [ "${NMS_MODE}" = "remote" ]; then
     	bbplain "Compiling remote version"
 		install -m 0755 ${WORKDIR}/nms-server-remote.service ${D}/${systemd_system_unitdir}/nms-server.service
