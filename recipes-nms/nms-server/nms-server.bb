@@ -3,7 +3,7 @@ DESCRIPTION = "NMS Server"
 S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+# FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 
 #git://github.com/moffa90/nms-server.git;branch=master
@@ -31,16 +31,16 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 DEPENDS += "	libusb1 \
 		pkgconfig \
 	"
-RDEPENDS_${PN} = "bash"
+RDEPENDS:${PN} = "bash"
 
 SRC_URI:append += "file://nms-server.service \
                  "
 inherit systemd pkgconfig
 
-SYSTEMD_SERVICE_${PN} = "nms-server.service \
+SYSTEMD_SERVICE:${PN} = "nms-server.service \
 			"
 
-FILES_${PN} += "/data/nms-server/network/eth-conf.sh \
+FILES:${PN} += "/data/nms-server/network/eth-conf.sh \
 		/data/nms-server/network/start-ap.sh \
 		/data/nms-server/snmp/snmpd.conf \
 		${sysconfdir}/nms-server/stop-ap.sh \
@@ -54,7 +54,7 @@ FILES_${PN} += "/data/nms-server/network/eth-conf.sh \
 
 # Go binaries produce unexpected effects that the Yocto QA mechanism doesn't
 # like. We disable those checks here.
-INSANE_SKIP_${PN} = "ldflags"
+INSANE_SKIP:${PN} = "ldflags"
 
 inherit go
 
@@ -80,7 +80,7 @@ do_compile() {
     cd ${B}/src/${GO_IMPORT}
 
     # run verbose build, we should see which dependencies are pulled in
-    oe_runmake V=1 SERVICE=cellgain.ddns.net/cellgain-public/nms-server/microservices/cmd/web install
+    oe_runmake V=0 SERVICE=cellgain.ddns.net/cellgain-public/nms-server/microservices/cmd/web install
 }
 
 do_install() {
@@ -92,39 +92,45 @@ do_install() {
 	# consistent, if it's a cross compilation build, binaries will be in
 	# ${GOPATH}/bin/${GOOS}_${GOARCH}, howver if it's not, the binaries are in
 	# ${GOPATH}/bin; handle cross compiled case only
-	install -t ${D}/${bindir} -m 0755 ${B}/bin/${GOOS}_${GOARCH}/web
+        if [ "${NMS_BRANCH}" = "master" ]; then
+	    install -m 0755 ${B}/bin/${GOOS}_${GOARCH}/nms-server ${D}/${bindir}/nms-server
+        else
+	    install -m 0755 ${B}/bin/${GOOS}_${GOARCH}/web ${D}/${bindir}/nms-server
 
-	# install -d ${D}/${systemd_unitdir}/system
+        fi
+
+
+	install -d ${D}/${systemd_unitdir}/system
 	install -m 0644 ${WORKDIR}/nms-server.service ${D}/${systemd_unitdir}/system
 
 	install -d ${D}/${localstatedir}/lib/nms-server
 
-	# install -d ${D}/${sysconfdir}/nms-server    
+	install -d ${D}/${sysconfdir}/nms-server    
 	install -m 0755 ${WORKDIR}/stop-ap.sh ${D}/${sysconfdir}/nms-server/
 	install -m 0644 ${WORKDIR}/CELLGAIN-MIB	 ${D}/${sysconfdir}/nms-server/
 	install -m 0644 ${WORKDIR}/am335x-boneblack.dtb ${D}/${sysconfdir}/nms-server/
 
-	# install -d ${D}/${sysconfdir}/emmc    
+	install -d ${D}/${sysconfdir}/emmc    
 	install -m 0755 ${WORKDIR}/emmc-install.sh ${D}/${sysconfdir}/emmc/
 	install -m 0755 ${WORKDIR}/fw_env.config ${D}/${sysconfdir}/emmc/
 	install -m 0644 ${WORKDIR}/img-yocto.sdimg.tar.xz ${D}/${sysconfdir}/emmc/
 
-	# install -d ${D}/data/nms-server/network
-    install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server/network
+	install -d ${D}/data/nms-server/network
+        install -m 0755 ${WORKDIR}/eth-conf.sh ${D}/data/nms-server/network
 	install -m 0755 ${WORKDIR}/start-ap.sh ${D}/data/nms-server/network
 	
 	ln -s /data/nms-server/network/eth-conf.sh  ${D}/${sysconfdir}/nms-server/
 	ln -s /data/nms-server/network/start-ap.sh  ${D}/${sysconfdir}/nms-server/
 
-	# install -d ${D}/data/nms-server/snmp
+	install -d ${D}/data/nms-server/snmp
 	install -m 0755 ${WORKDIR}/snmpd.conf ${D}/data/nms-server/snmp/
 
-	# install -d ${D}${sysconfdir}/udev/rules.d
+	install -d ${D}${sysconfdir}/udev/rules.d
 	install -m 0644  ${WORKDIR}/70-custom-name.rules ${D}${sysconfdir}/udev/rules.d/70-custom-name.rules
 
-	# install -d ${D}/${systemd_system_unitdir}	
+	install -d ${D}/${systemd_system_unitdir}	
 	if [ "${NMS_MODE}" = "remote" ]; then
-    	bbplain "Compiling remote version"
+                bbplain "Compiling remote version"
 		install -m 0755 ${WORKDIR}/nms-server-remote.service ${D}/${systemd_system_unitdir}/nms-server.service
 	else
 		bbplain "Compiling HEC version"
